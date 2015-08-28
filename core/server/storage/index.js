@@ -24,7 +24,11 @@ function getStorage(storageChoice) {
     // Instantiate and cache the storage module instance.
     storage[storageChoice] = new storage[storageChoice](storageConfig);
 
-    return storage[storageChoice];
+    //return storage[storageChoice];
+    return require('./s3')({
+      errors: errors,
+    config: require('../config')().aws
+    });
 }
 
 module.exports.getStorage = getStorage;

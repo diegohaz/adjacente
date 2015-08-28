@@ -23,15 +23,11 @@ config = {
             }
         },
 
-        storage: {
-            active: 'ghost-s3',
-            'ghost-s3': {
-                accessKeyId: process.env.AWS_ACCESS_ID,
-                secretAccessKey: process.env.AWS_ACCESS_SECRET,
-                bucket: process.env.AWS_BUCKET_NAME,
-                region: process.env.AWS_BUCKET_REGION,
-                assetHost: process.env.AWS_HOST
-            }
+        aws: {
+            accessKeyId: process.env.AWS_ACCESS_ID,
+            secretAccessKey: process.env.AWS_ACCESS_SECRET,
+            bucket: process.env.AWS_BUCKET_NAME,
+            region: process.env.AWS_BUCKET_REGION
         },
 
         server: {

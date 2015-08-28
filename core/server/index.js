@@ -155,7 +155,7 @@ function init(options) {
         return builtFilesExist();
     }).then(function () {
         // Initialise the models
-        //return models.init();
+        return models.init();
     }).then(function () {
         // Initialize migrations
         return migrations.init();
